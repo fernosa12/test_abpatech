@@ -14,9 +14,9 @@ class AuthApiImpl implements AuthApi {
   @override
   Future<ApiResponse<LocalUser>> login(String email, String password) async {
     final response = await dio.post(
-      '/auth/login',
+      'api/login',
       data: {
-        'credential': email,
+        'email': email,
         'password': password,
       },
     );

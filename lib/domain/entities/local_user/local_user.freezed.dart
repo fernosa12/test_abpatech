@@ -24,11 +24,8 @@ mixin _$LocalUser {
   String get userId => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'sellerStatus')
-  int get sellerStatus => throw _privateConstructorUsedError;
   @JsonKey(name: 'token')
   String get token => throw _privateConstructorUsedError;
-  bool get isSellerMode => throw _privateConstructorUsedError;
 
   /// Serializes this LocalUser to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -48,9 +45,7 @@ abstract class $LocalUserCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'id') String userId,
       @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'sellerStatus') int sellerStatus,
-      @JsonKey(name: 'token') String token,
-      bool isSellerMode});
+      @JsonKey(name: 'token') String token});
 }
 
 /// @nodoc
@@ -70,9 +65,7 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
   $Res call({
     Object? userId = null,
     Object? name = null,
-    Object? sellerStatus = null,
     Object? token = null,
-    Object? isSellerMode = null,
   }) {
     return _then(_value.copyWith(
       userId: null == userId
@@ -83,18 +76,10 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sellerStatus: null == sellerStatus
-          ? _value.sellerStatus
-          : sellerStatus // ignore: cast_nullable_to_non_nullable
-              as int,
       token: null == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String,
-      isSellerMode: null == isSellerMode
-          ? _value.isSellerMode
-          : isSellerMode // ignore: cast_nullable_to_non_nullable
-              as bool,
     ) as $Val);
   }
 }
@@ -110,9 +95,7 @@ abstract class _$$LocalUserImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'id') String userId,
       @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'sellerStatus') int sellerStatus,
-      @JsonKey(name: 'token') String token,
-      bool isSellerMode});
+      @JsonKey(name: 'token') String token});
 }
 
 /// @nodoc
@@ -130,9 +113,7 @@ class __$$LocalUserImplCopyWithImpl<$Res>
   $Res call({
     Object? userId = null,
     Object? name = null,
-    Object? sellerStatus = null,
     Object? token = null,
-    Object? isSellerMode = null,
   }) {
     return _then(_$LocalUserImpl(
       userId: null == userId
@@ -143,18 +124,10 @@ class __$$LocalUserImplCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sellerStatus: null == sellerStatus
-          ? _value.sellerStatus
-          : sellerStatus // ignore: cast_nullable_to_non_nullable
-              as int,
       token: null == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String,
-      isSellerMode: null == isSellerMode
-          ? _value.isSellerMode
-          : isSellerMode // ignore: cast_nullable_to_non_nullable
-              as bool,
     ));
   }
 }
@@ -165,9 +138,7 @@ class _$LocalUserImpl extends _LocalUser {
   _$LocalUserImpl(
       {@JsonKey(name: 'id') required this.userId,
       @JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'sellerStatus') required this.sellerStatus,
-      @JsonKey(name: 'token') required this.token,
-      this.isSellerMode = false})
+      @JsonKey(name: 'token') required this.token})
       : super._();
 
   factory _$LocalUserImpl.fromJson(Map<String, dynamic> json) =>
@@ -180,18 +151,12 @@ class _$LocalUserImpl extends _LocalUser {
   @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'sellerStatus')
-  final int sellerStatus;
-  @override
   @JsonKey(name: 'token')
   final String token;
-  @override
-  @JsonKey()
-  final bool isSellerMode;
 
   @override
   String toString() {
-    return 'LocalUser(userId: $userId, name: $name, sellerStatus: $sellerStatus, token: $token, isSellerMode: $isSellerMode)';
+    return 'LocalUser(userId: $userId, name: $name, token: $token)';
   }
 
   @override
@@ -201,17 +166,12 @@ class _$LocalUserImpl extends _LocalUser {
             other is _$LocalUserImpl &&
             (identical(other.userId, userId) || other.userId == userId) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.sellerStatus, sellerStatus) ||
-                other.sellerStatus == sellerStatus) &&
-            (identical(other.token, token) || other.token == token) &&
-            (identical(other.isSellerMode, isSellerMode) ||
-                other.isSellerMode == isSellerMode));
+            (identical(other.token, token) || other.token == token));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, userId, name, sellerStatus, token, isSellerMode);
+  int get hashCode => Object.hash(runtimeType, userId, name, token);
 
   /// Create a copy of LocalUser
   /// with the given fields replaced by the non-null parameter values.
@@ -233,9 +193,7 @@ abstract class _LocalUser extends LocalUser {
   factory _LocalUser(
       {@JsonKey(name: 'id') required final String userId,
       @JsonKey(name: 'name') required final String name,
-      @JsonKey(name: 'sellerStatus') required final int sellerStatus,
-      @JsonKey(name: 'token') required final String token,
-      final bool isSellerMode}) = _$LocalUserImpl;
+      @JsonKey(name: 'token') required final String token}) = _$LocalUserImpl;
   _LocalUser._() : super._();
 
   factory _LocalUser.fromJson(Map<String, dynamic> json) =
@@ -248,13 +206,8 @@ abstract class _LocalUser extends LocalUser {
   @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'sellerStatus')
-  int get sellerStatus;
-  @override
   @JsonKey(name: 'token')
   String get token;
-  @override
-  bool get isSellerMode;
 
   /// Create a copy of LocalUser
   /// with the given fields replaced by the non-null parameter values.

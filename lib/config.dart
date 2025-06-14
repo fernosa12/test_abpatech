@@ -66,7 +66,7 @@ class _Env {
   factory _Env.dev(String fcmToken) {
     return _Env(
       appName: 'Dev',
-      baseUrl: 'http://10.10.11.26:4000',
+      baseUrl: 'http://localhost:3000',
       envName: 'dev',
       fcmToken: fcmToken,
       fcmPrefix: 'dev',

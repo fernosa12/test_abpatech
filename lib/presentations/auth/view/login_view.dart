@@ -46,7 +46,11 @@ class _LoginViewState extends State<LoginView> {
                     children: [
                       SizedBox(
                           height: MediaQuery.of(context).size.height * 0.25,
-                          child: Image.asset('assets/images/onanmedia.png')),
+                          child: FlutterLogo(
+                            size: 100,
+                            style: FlutterLogoStyle.markOnly,
+                            textColor: const Color(0xff6136e3),
+                          )),
                       Form(
                         // key: _formKey,
                         child: Column(
