@@ -93,7 +93,7 @@ class _Env {
   factory _Env.prod(String fcmToken) {
     return _Env(
       appName: 'Prod',
-      baseUrl: 'http://localhost:4000',
+      baseUrl: 'http://localhost:3000',
       envName: 'prod',
       fcmToken: fcmToken,
       fcmPrefix: '',

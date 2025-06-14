@@ -151,35 +151,6 @@ class _LoginViewState extends State<LoginView> {
                           ],
                         ),
                       ),
-                      const Text(
-                        'Atau masuk dengan',
-                        style: TextStyle(color: Color(0xFF828282)),
-                      ),
-                      const SizedBox(height: 10),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset('assets/images/google_logo.png',
-                              width: 50),
-                        ],
-                      ),
-                      const Text(
-                        'Belum punya akun onanmedia ?',
-                        style: TextStyle(color: Color(0xFF828282)),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          // Get.to(const RegisterView());
-                        },
-                        child: const Text(
-                          'Daftar Sekarang !',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xff6136e3),
-                          ),
-                        ),
-                      ),
                     ],
                   ),
                 ),

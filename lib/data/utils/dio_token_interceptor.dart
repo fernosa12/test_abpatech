@@ -40,9 +40,9 @@ class DioTokenInterceptor implements InterceptorsWrapper {
     }
 
     /// xxx url encode if post
-    if (options.method == 'POST') {
-      options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
-    }
+    // if (options.method == 'POST') {
+    //   options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+    // }
     if (options.data is Map &&
         (options.data as Map).containsKey('dio.user_id')) {
       options.data = <String, dynamic>{
