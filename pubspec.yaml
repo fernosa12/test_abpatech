@@ -56,6 +56,10 @@ dependencies:
   webview_flutter: ^4.8.0
   smooth_page_indicator: ^1.2.1
   fluttertoast: ^8.2.12
+  shared_preferences: ^2.5.3
+  carousel_slider: ^5.0.0
+  just_audio: ^0.10.0
+  audio_session: ^0.2.1
 
 dev_dependencies:
   auto_route_generator: ^9.0.0
@@ -69,7 +73,10 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/
+    # - assets/images/
+    # - assets/images/home/
+    # - assets/images/auth/
+    # - assets/images/onboarding/
   #   - assets/images/
   #   - assets/images/profile/
   #   - assets/images/pengiriman/
